@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 import numpy as np
 import mxnet.ndarray as nd
 import mxnet.autograd as ag

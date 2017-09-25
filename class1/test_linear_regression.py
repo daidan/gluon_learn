@@ -1,7 +1,10 @@
-from mxnet import ndarray as nd
-from mxnet import autograd
+# -*- coding: UTF-8 -*-
 
 import random
+
+from mxnet import autograd
+from mxnet import ndarray as nd
+
 
 num_inputs = 2
 num_examples = 1000
