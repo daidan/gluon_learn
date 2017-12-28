@@ -8,6 +8,7 @@ Created on 2017年10月6日
 
 
 import sys
+import mxnet
 sys.path.append('..')
 
 from mxnet import ndarray as nd
@@ -85,6 +86,3 @@ for epoch in range(5):
     print("Epoch %d. Loss: %f, Train acc %f, Test acc %f" % (
         epoch, train_loss/len(train_data),
         train_acc/len(train_data), test_acc))
-
-if __name__ == '__main__':
-    pass

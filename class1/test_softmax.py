@@ -92,10 +92,10 @@ for epoch in range(5):
         loss.backward()
         # 将梯度做平均，这样学习率会对batch size不那么敏感
         SGD(params, learning_rate/batch_size)
-
+ 
         train_loss += nd.mean(loss).asscalar()
         train_acc += accuracy(output, label)
-
+ 
     test_acc = evaluate_accuracy(test_data, net)
     print("Epoch %d. Loss: %f, Train acc %f, Test acc %f" % (
         epoch, train_loss/len(train_data), train_acc/len(train_data), test_acc))
