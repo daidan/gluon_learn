@@ -7,16 +7,12 @@ Created on 2017年12月28日
 '''
 
 import pip
-
 import mxnet as mx
-import mxnet.ndarray as nd
 
-if pip.main(['show', 'mxnet-cu80']) == 0:
-    print('use gpu')
-else:
-    print('use cpu')
-
-_CTX = mx.gpu()
-
-x = nd.array([1, 2, 3], ctx=_CTX)
-print(x)
+def get_ctx():
+    if pip.main(['show', 'mxnet-cu80']) == 0:
+        _CTX = mx.gpu()
+    else:
+        _CTX = mx.cpu()
+    
+    return _CTX
