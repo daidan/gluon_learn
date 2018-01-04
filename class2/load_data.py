@@ -73,4 +73,4 @@ def show_plot(get_data=get_FashionMNIST):
     data, label = data_train[0:9]
     show_images(data)
     print(get_text_labels(label))
-show_plot(get_data=get_CIFAR10)
+show_plot(get_data=get_MNIST)
